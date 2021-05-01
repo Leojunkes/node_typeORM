@@ -1,6 +1,19 @@
 # Criando uma aplicação Node
 ## primeira aula:
 
+## estrutura de pastas
+
+### src
+- controllers
+- databases
+- entities
+- Repositories
+
+### routes.ts
+### server.ts
+### ormconfig.json
+
+
 ## aos 58.01 minutos
 professora falou que devemos iniciar o typescript com o comando:
 
@@ -58,11 +71,62 @@ cria uma migration com public up - toda a estrutura vai ali em up. e public down
 
 Connections
 
-Users
+Users => await queryRunner.createTable(
+            new Table({
+                name: 'users',
+                columns: [
+                    {
+                        name: "id",
+                        type: "uuid",
+                        isPrimary: true,
+                    },
+                    {
+                        name: "email",
+                        type: "varchar",
+                    },
+                    {
+                        name: "createdAt",
+                        type: "timestamp",
+                        default: "now()",
+
+                    }
+                ]
+            })
+       
 
 Messages
 
-Settings
+Settings =>  await queryRunner.createTable(
+            new Table({
+                name: 'setings',
+                columns: [
+                    {
+                        name: 'id',
+                        type: 'uuid',
+                        isPrimary: true
+                    },
+                    {
+                        name: 'username',
+                        type: 'varchar'
+                    },
+                    {
+                        name: 'chat',
+                        type: 'boolean',
+                        default: true
+                    },
+                    {
+                        name: 'updatedAt',
+                        type: 'timestamp',
+                        default: 'now()'
+                    },
+                    {
+                        name: 'createdAt',
+                        type: 'timestamp',
+                        default: 'now()'
+                    }
+                ]
+            })
+        );
 
 Após as migrations criadas, por ela para funcionar:
 
@@ -82,4 +146,11 @@ forma de deixar a aplicação mais separada/dividida.
 
 Routes Params - de rotas
 query Params - filtros de buscas
-body Params - c
+body Params
+
+# Aula 3
+
+Executar a regra de negócio da aplicação - liberar responsabilidade dos controllers.
+
+criar pasta services - que ficará com a regra de negócio
+dividir responsabilidades entre controllers e services.
