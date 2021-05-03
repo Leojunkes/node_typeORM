@@ -154,3 +154,14 @@ Executar a regra de negócio da aplicação - liberar responsabilidade dos contr
 
 criar pasta services - que ficará com a regra de negócio
 dividir responsabilidades entre controllers e services.
+
+Relacionamento entre tabelas sempre tem que ter a FOREIGNKEY.
+
+### Entitys
+
+Nome e configurações da tabela:
+
+Exemplo: PrimaryColumn, Column, JoinColumn=>Relacionamento entre tabelas, MANYTOONE = Muitas 'MESSAGES' para um 'USERS'
+
+Aos 58:55/h Professora falou que se algum atributo eu não quero deixar obrigatório eu coloco um ponto de interrogação na logo após o atributo, EXEMPLO => ```Admin_id?:srting```
+
