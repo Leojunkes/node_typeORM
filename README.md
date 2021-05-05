@@ -163,5 +163,9 @@ Nome e configurações da tabela:
 
 Exemplo: PrimaryColumn, Column, JoinColumn=>Relacionamento entre tabelas, MANYTOONE = Muitas 'MESSAGES' para um 'USERS'
 
-Aos 58:55/h Professora falou que se algum atributo eu não quero deixar obrigatório eu coloco um ponto de interrogação na logo após o atributo, EXEMPLO => ```Admin_id?:srting```
+Aos 58:55/h Professora falou que se algum atributo eu não quero deixar obrigatório eu coloco um ponto de interrogação na logo após o atributo, EXEMPLO => ```Admin_id?:string```
+
+PRIVATE = somente será utilizado o método na classe no qual estamos trabalhando e não em outra classe..
+
+
 
